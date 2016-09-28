@@ -1,5 +1,5 @@
 function wordCount(string) {
-    //1. Split string into it's components
+    //1. Split string into its components
     var stringtoSplit = string;
     var splitString = string.split(" ");
     var words = {};
@@ -16,14 +16,15 @@ function wordCount(string) {
         count++;
     }
     // 3. Determine frequency of words in array and update them in object
-
-    for (count = 0; count < splitString.length; count++) {
+    var count = 0;
+    while (count < splitString.length) {
         var currentWord = splitString[count];
           if (currentWord in words){
             words[currentWord] ++;
           } else {
             words[currentWord] = 1;
           }
+        count++;
     }
 
     console.log(words);
